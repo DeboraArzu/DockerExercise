@@ -11,6 +11,5 @@ def hello():
     redis.incr('hits')
     return 'Hello from Flask! You have seen this %s times.' % redis.get('hits')
 
-
 if __name__ == "__main__":
     app.run("0.0.0.0", port=8080, debug=True)

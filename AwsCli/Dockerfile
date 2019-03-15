@@ -1,5 +1,5 @@
 FROM alpine:3.7
-WORKDIR '/app'
+WORKDIR /app
 
 RUN apk update
 RUN apk -Uuv add groff less python py-pip

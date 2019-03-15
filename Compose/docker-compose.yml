@@ -1,0 +1,19 @@
+version: '3'
+services:
+  redis:
+    image: 'redis:latest'
+  flask:
+    build:
+      dockerfile: Dockerfile
+      context: ./flask
+  staticcontent:
+    build:
+      dockerfile: Dockerfile
+      context: ./staticContent
+  proxyserver:
+    restart: always
+    build:
+        dockerfile: Dockerfile
+        context: ./ProxyServer
+    ports:
+      - '3050:80'

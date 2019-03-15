@@ -2,7 +2,7 @@ FROM alpine:latest
 
 WORKDIR /app
 
-RUN apk add docker
-RUN apk add py-pip
-RUN pip install docker-compose
+RUN apk add docker && \
+    apk add py-pip && \
+    pip install docker-compose
 

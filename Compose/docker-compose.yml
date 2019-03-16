@@ -7,9 +7,12 @@ services:
       dockerfile: Dockerfile
       context: ./flask
   staticcontent:
+    restart: always
     build:
       dockerfile: Dockerfile
       context: ./staticContent
+    ports:
+      - '3000:81'
   proxyserver:
     restart: always
     build:

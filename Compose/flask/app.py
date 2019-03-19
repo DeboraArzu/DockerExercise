@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 redis = Redis(host = 'redis', port=6379)
 
-@app.route("/")
+@app.route("/flask")
 def home():
     return '''
         <!DOCTYPE html>
@@ -30,7 +30,7 @@ def home():
         </html>
     '''
 
-@app.route("/redis")
+@app.route("/flask/redis")
 def hello():
     redis.incr('hits')
     return 'Hello from Flask! You have seen this %s times.' % redis.get('hits')

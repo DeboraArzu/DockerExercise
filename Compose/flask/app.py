@@ -21,7 +21,8 @@ def home():
                 <h1 class="logo">First Flask Web App</h1>
                 <strong><nav>
                 <ul class="menu">
-                    <li><a href="redis">Redis</a></li>
+                    <li><a href="flask/redis">Redis</a></li>
+                    <li><a href="static/">Static Content</a></li>
                 </ul>
                 </nav></strong>
             </div>
